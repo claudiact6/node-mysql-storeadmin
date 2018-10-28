@@ -1,0 +1,25 @@
+{
+  "name": "node-mysql-storeadmin",
+  "version": "1.0.0",
+  "description": "Local point of sale system that takes orders, manages inventory, etc.",
+  "main": "index.js",
+  "dependencies": {
+    "inquirer": "^6.2.0",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claudiact6/node-mysql-storeadmin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/claudiact6/node-mysql-storeadmin/issues"
+  },
+  "homepage": "https://github.com/claudiact6/node-mysql-storeadmin#readme"
+}

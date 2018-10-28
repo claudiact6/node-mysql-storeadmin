@@ -1,2 +1,2 @@
 INSERT INTO products
-VALUES (12345, "Storm Trooper Mask", "Masks", 30.99, 15), ();
+VALUES (12345, "Storm Trooper mask", "Masks", 30.99, 15), (42394, "White gloves - short", "Accessories", 5.99, 10), (93824, "Minnie bow headband", "Accessories", 6.99, 24), (87426, "Green 20in wig", "Wigs", 12.99, 9), (23414, "Ash hat", "Accessories", 11.99, 6), (29754, "Alice in Wonderland dress", "Costumes", 24.99, 17), (79271, "Mermaid tail", "Costumes", 20.99, 15), (92814, "Scream mask", "Masks", 10.99, 20), (92834, "Plastic knife", "Accessories", 4.99, 21), (21947, "Pumpkin costume - baby", "Costumes", 12.99, 23), (45569, "Clown nose", "Accessories", 2.99, 24), (72947, "Ruby slippers - size 4", "Accessories", 9.99, 4);
