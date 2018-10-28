@@ -1,5 +1,6 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
+
 var availableProducts = [];
 
 var connection = mysql.createConnection({
@@ -17,7 +18,7 @@ connection.connect(function (err) {
 
 console.log("------Welcome to Bamazon! Here are our available products.------");
 
-connection.query("SELECT item_id, product_name, price FROM products ORDER BY product_name", function(err, res) {
+connection.query("SELECT item_id, product_name, price FROM products WHERE stock_quantity > 0 ORDER BY product_name", function(err, res) {
     if (err) throw err;
     for (i = 0; i < res.length; i++) {
         // console.log("Item " + res[i].item_id + ", " + res[i].product_name + ", $" + res[i].price);
@@ -31,7 +32,7 @@ connection.query("SELECT item_id, product_name, price FROM products ORDER BY pro
             choices: availableProducts
         },
         {
-            type: "input",
+            type: "number",
             name: "units",
             message: "How many would you like?"
         }
@@ -61,8 +62,11 @@ connection.query("SELECT item_id, product_name, price FROM products ORDER BY pro
                     } else {
                         console.log("Thanks for visiting Bamazon! Please come back soon.")
                         connection.end();
-                    } 
+                    }; 
                 });
+            } else if (requestedUnits == NaN) {
+                console.log("You were supposed to pick a number. Please come back when you make sense.");
+                connection.end();
             } else {
                 console.log("Oops! We don't have enough " + product + "s to fill your order. Thanks for visiting Bamazon!");
                 connection.end();
